@@ -1,0 +1,32 @@
+-------------- +=
+String concatenation '+=' in loop less... (Ctrl+F1)
+Inspection info: Reports String concatenation in loops. As every String concatenation copies the whole String, usually it is preferable to replace it with explicit calls to StringBuilder.append() or StringBuffer.append().
+
+
+
+这种格式化方案 特别好使
+System.out.printf("单词:%-66s 出现次数:%d\n", word, hashMap.get(word));
+
+
+
+while
+replaceable with 'foreach' less... (Ctrl+F1)
+Inspection info: Reports while loops which iterate over collections, and can be replaced with the foreach iteration syntax, which is available in Java 5 and newer.
+This inspection only reports if the project or module is configured to use a language level of 5.0 or higher.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
