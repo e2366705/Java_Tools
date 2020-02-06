@@ -68,6 +68,7 @@ public class Get_Clipboard_to_MySQL {
 
                 if (true_or_false){
                     String chinese_meaning = translation.English_to_chinese(text2);
+                    System.err.println("中文意思是:   " + chinese_meaning);
 
                     if (chinese_meaning.length() > 0){
                         boolean item = to_mySQL.Insert(text2 , chinese_meaning);
