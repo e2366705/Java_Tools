@@ -215,7 +215,7 @@ class TO_MySQL {
     public boolean Insert(String phrase, String chinese_meaning) throws SQLException {
 
         Connection conn = getConn();
-        String sql = "insert into `phrase`(phrase , chinese_meaning) values(? , ?)";
+        String sql = "insert into `tb_word`(phrase , chinese_meaning) values(? , ?)";
 
         PreparedStatement ps = conn.prepareStatement(sql);
 

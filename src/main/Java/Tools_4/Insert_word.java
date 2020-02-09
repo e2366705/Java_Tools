@@ -79,7 +79,7 @@ class SQL_{
     //      delete from `phrase` where `word` is null
     public void Delete_word_is_null() throws SQLException {
         Connection conn = getConn();
-        String sql = "   delete from `phrase` where `word` is null   ";
+        String sql = "   delete from `tb_word` where `word` is null   ";
         PreparedStatement ps = conn.prepareStatement(sql);
         System.out.println(ps.toString());      // 输出 SQL 语句
         int i = ps.executeUpdate();
@@ -95,7 +95,7 @@ class SQL_{
     public void Insert(String word , String phrase , String chinese_meaning) throws SQLException {
 
         Connection conn = getConn();
-        String sql = "  insert into `phrase`(`word` , `phrase` , `chinese_meaning` ) VALUES(? , ? , ? )  ";
+        String sql = "  insert into `tb_word`(`word` , `phrase` , `chinese_meaning` ) VALUES(? , ? , ? )  ";
 
         PreparedStatement ps = conn.prepareStatement(sql);
         System.out.println(ps.toString());      // 输出 SQL 语句
@@ -127,7 +127,7 @@ class SQL_{
         Statement stmt = conn.createStatement();
         System.out.println(" 实例化Statement对象...");
 
-        String sql = "  SELECT `phrase` , `chinese_meaning` from `phrase` WHERE `word` is null  ";
+        String sql = "  SELECT `phrase` , `chinese_meaning` from `tb_word` WHERE `word` is null  ";
         PreparedStatement ps = conn.prepareStatement(sql);
         System.out.println(ps.toString());      // 输出 SQL 语句
         ResultSet rs = null;
@@ -167,7 +167,7 @@ class SQL_{
         Statement stmt = conn.createStatement();
         System.out.println(" 实例化Statement对象...");
 
-        String sql = "  SELECT `phrase` from `phrase` WHERE `word` is null  ";
+        String sql = "  SELECT `phrase` from `tb_word` WHERE `word` is null  ";
         PreparedStatement ps = conn.prepareStatement(sql);
         System.out.println(ps.toString());      // 输出 SQL 语句
         ResultSet rs = ps.executeQuery();
