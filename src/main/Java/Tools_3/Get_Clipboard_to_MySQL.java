@@ -33,9 +33,11 @@ import static Tools_3.Clipboard_.getClipboardString;
     并获取相关的翻译
     然后把词组和中文意思都保存在MySQL数据库里
 */
-
+class Aaa{
+    public void Aaaaaa(){
+    }
+}
 public class Get_Clipboard_to_MySQL {
-
     @Test
     public void Main___() throws InterruptedException, IOException, JavaLayerException, SQLException {
         Audio_ audio_ = new Audio_();
