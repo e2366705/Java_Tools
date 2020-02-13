@@ -1,4 +1,4 @@
-package Tools_3;
+package Get_Clipboard_to_MySQL;
 
 import org.junit.Test;
 

@@ -1,9 +1,8 @@
-package Tools_3;
+package Get_Clipboard_to_MySQL;
 
 import com.swjtu.lang.LANG;
 import com.swjtu.querier.Querier;
 import com.swjtu.trans.AbstractTranslator;
-import com.swjtu.trans.impl.BaiduTranslator;
 import com.swjtu.trans.impl.GoogleTranslator;
 import javazoom.jl.decoder.JavaLayerException;
 import javazoom.jl.player.Player;
@@ -15,14 +14,13 @@ import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.StringSelection;
 import java.awt.datatransfer.Transferable;
 import java.io.*;
-import java.net.MalformedURLException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
 
-import static Tools_3.Clipboard_.getClipboardString;
+import static Get_Clipboard_to_MySQL.Clipboard_.getClipboardString;
 
 
 
