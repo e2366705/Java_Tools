@@ -1,4 +1,4 @@
-package Get_Clipboard_to_MySQL;
+package Get_Clipboard_to_MySQL_2;
 
 /*
 

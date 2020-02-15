@@ -67,7 +67,7 @@ public class Get_Clipboard_to_MySQL {
                 boolean true_or_false = check_txt.check(text2);
 
                 if (true_or_false){
-                    String chinese_meaning = translation.English_to_chinese(text2);
+                    String chinese_meaning = translation.Baidu_translate_phrase(text2);
                     System.err.println("中文意思是:   " + chinese_meaning);
 
                     if (chinese_meaning.length() > 0){
@@ -241,16 +241,3 @@ class TO_MySQL {
 }
 
 
-class  Translation{
-
-    public String  English_to_chinese(String english_string){
-        Querier<AbstractTranslator> querierTrans = new Querier<>();  // 获取查询器
-        querierTrans.setParams(LANG.EN, LANG.ZH, english_string);// 设置参数
-//        querierTrans.setParams(LANG.EN, LANG.ZH, "miss");// 设置参数
-        querierTrans.attach(new GoogleTranslator());// 向查询器中添加 Google 翻译器
-        List<String> result = querierTrans.execute();// 执行查询并接收查询结果
-        System.err.println(result.get(0));
-
-        return result.get(0);
-    }
-}
