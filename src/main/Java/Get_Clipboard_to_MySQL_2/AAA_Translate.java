@@ -2,7 +2,6 @@ package Get_Clipboard_to_MySQL_2;
 
 
 import Get_Clipboard_to_MySQL_2.Clipboard;
-import Java_USE_python.HttpRequest;
 import org.junit.Test;
 
 import java.io.*;
