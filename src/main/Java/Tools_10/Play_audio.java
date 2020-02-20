@@ -18,7 +18,7 @@ public class Play_audio {
         Player player;
         File music;
 
-        BufferedInputStream buffer = new BufferedInputStream(new FileInputStream("src\\main\\Java\\Tools_10\\Audio\\no_Chinese_meaning.MP3"));
+        BufferedInputStream buffer = new BufferedInputStream(new FileInputStream("src/main/Java/Tools_10/Audio/no_Chinese_meaning.MP3"));
         player = new Player(buffer);
         player.play();
     }
@@ -28,7 +28,7 @@ public class Play_audio {
         Player player;
         File music;
 
-        BufferedInputStream buffer = new BufferedInputStream(new FileInputStream("src\\main\\Java\\Tools_10\\Audio\\success.MP3"));
+        BufferedInputStream buffer = new BufferedInputStream(new FileInputStream("src/main/Java/Tools_10/Audio/success.MP3"));
         player = new Player(buffer);
         player.play();
     }
@@ -38,7 +38,7 @@ public class Play_audio {
         Player player;
         File music;
 
-        BufferedInputStream buffer = new BufferedInputStream(new FileInputStream("src\\main\\Java\\Tools_10\\Audio\\warning1.mp3"));
+        BufferedInputStream buffer = new BufferedInputStream(new FileInputStream("src/main/Java/Tools_10/Audio/warning1.mp3"));
         player = new Player(buffer);
         player.play();
     }

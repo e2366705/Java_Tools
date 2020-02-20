@@ -77,6 +77,8 @@ public class Get_word_Translate {
         // 记录条数
         int count = 0;
 
+        // 查询出来的中文意思
+        String chinese_meaning = "";
 
         // 无限循环
         while (true){
@@ -100,7 +102,12 @@ public class Get_word_Translate {
                 Thread.sleep(random_num);
 
                 // 联网查询英文单词 的 中文意思
-                String chinese_meaning = get_translate.Get_word_translte(word);
+                chinese_meaning = get_translate.Get_word_translte_Baidu(word);
+
+                // 如果百度 没有检索到这个单词的中文意思, 那么久调用 Google 翻译接口
+                if (chinese_meaning.length() < 1){
+                    chinese_meaning = get_translate.Translation_by_Google(word);
+                }
 
                 // 把这个单词的中文意思 , 更新到这个单词
                 int update_number = sql.Update_chinese_meaning(word, chinese_meaning);
