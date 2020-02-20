@@ -77,7 +77,6 @@ country is facing
 
                 if (true_or_false){
                     phrase = new_copy;
-
                     String word_temp = "";
 
                     // 转换字符串
@@ -115,41 +114,12 @@ country is facing
 
 
 
-class JSON{
-    public String Json(String json_data){
-        JSONObject jsonobj = new JSONObject(json_data);
-
-        JSONObject data = (JSONObject) jsonobj.get("data");
-        Object fanyi = data.get("fanyi");
-
-        String fanyi_result = String.valueOf(fanyi);
-        System.err.println("翻译 result :             "+fanyi_result);
-
-        return fanyi_result;
-    }
-}
 
 
 
-class Unicodeee{
 
-    public String UnicodeTo_chinese(String str){
-        str = "\\u5e26\\u6211\\u8d70\\u3002\\u53bb\\u90a3\\u9065\\u8fdc\\u7684\\u4ee5\\u540e";
 
-        Pattern pattern = Pattern.compile("(\\\\u(\\p{XDigit}{4}))");
-        Matcher matcher = pattern.matcher(str);
 
-        char ch;
 
-        String chinese_meaning = "";
-
-        while (matcher.find()) {
-            ch = (char) Integer.parseInt(matcher.group(2), 16);
-            str = str.replace(matcher.group(1), ch+"" );
-        }
-        System.out.println("UnicodeTo_chinese:      "+str);
-        return str;
-    }
-}
 
 

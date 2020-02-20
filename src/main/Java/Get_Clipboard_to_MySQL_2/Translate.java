@@ -26,7 +26,7 @@ public class Translate {
 
         String json_data = "";
         try{
-            URL url = new URL("https://fanyi.so.com/index/search?eng=1&validate=&ignore_trans=0&query=" + english);
+            URL url = new URL("http://fanyi.youdao.com/openapi.do?keyfrom=xinlei&key=759115437&type=data&doctype=json&version=1.1&q=" + english);
             URLConnection conn = url.openConnection(); //打开链接
             //获取网页的源代码
             BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
