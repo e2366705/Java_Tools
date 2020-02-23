@@ -9,10 +9,6 @@ public class Test005 {
     @Test
     public void Test___(){
 
-        String str =  "able  能；有能力的 enable  使……能够 unable  不会的, 不能够的;   ability  能力 disabled  残废的, 残疾的 disability  残废; 残疾";
-
-
-
-
+        System.out.println("Test005.Test___");
     }
 }

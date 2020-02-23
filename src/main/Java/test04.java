@@ -68,19 +68,3 @@ public class test04 {
 }
 
 
-class Similar_word {
-    //  First  Second  Third   Fourth   Fifth       Similar
-    /*
-        第一种相似的情况( First_Similar ):
-            类似于: defect 和 defective
-            可以发现 , defective 是完全包含 defect 的 , 中文意思也是非常相似
-
-            但是也有意外, 比如 be 和 belong , 虽然 belong 完全包含 be, 但是这根本就不是一码事...不能视为相似单词
-      */
-    public boolean First_Similar(String word_A, String word_B) {
-        return true;
-    }
-
-
-
-}
