@@ -1,19 +1,39 @@
-import oracle.jrockit.jfr.jdkevents.ThrowableTracer;
+package Derivative_word;
+
 import org.junit.Test;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * @author YXB
  * @date 2020/2/19 16:48
  */
-public class word {
+public class AAA_index {
+
 
     @Test
-    public void A__index() throws InterruptedException {
+    public void Test002() throws SQLException {
 
-        Read_txt read_txt = new Read_txt();
+
+
+    }
+
+
+    @Test
+    public void A__index() throws InterruptedException, SQLException {
+
+
+        IO read_txt = new IO();
 
         //  Similar 相似的单词   派生词   Derivative words  衍生词
         ArrayList<String> Similar_word_list = new ArrayList<>();
@@ -82,19 +102,19 @@ n. 名词 ,noun的缩写v. 动词 , verb的缩写pron. 代词 , pronoun的缩写
 //            System.out.println( i + "   --->   "+temp_array[i]);
         }
 
-        int count = 0;
+        Dispose_string dispose_string = new Dispose_string();
 
+        int count = 0;
         for (String value : Similar_word_list) {
             count++;
+            value = value.replaceAll("\\s", " ");           // 把任何空白字符(换行符, 制表符), 都转化成 空格
             Thread.sleep(88);
-            Thread.sleep(88);
-            System.out.println(value);
+            System.out.println(value);      // 转化结果就是:   assume  假定；设想 assumption  假定；设想
+            dispose_string.Get_english_word(value);
             System.out.println("======================================================");
-            Thread.sleep(88);
             Thread.sleep(88);
             System.err.println("当前 count 是   :     " +  count);
             Thread.sleep(88);
-            Thread.sleep(88);
 
         }
 
@@ -102,37 +122,3 @@ n. 名词 ,noun的缩写v. 动词 , verb的缩写pron. 代词 , pronoun的缩写
     }
 }
 
-
-class Read_txt {
-    public String Read_() {
-        /**
-         来源 :  http://lvhongqiang.com/blog5.html
-         我们都习惯于一次把文本的原始内容直接读取到内存中再做处理（暂时不考虑内存大小），这样做效率也会提高。
-         很多人用readline()之类的方法，可能需要反复访问文件，
-         而且每次readline()都会调用编码转换，降低了速度，
-         所以，在已知编码的情况下，
-         按字节流方式先将文件都读入内存，
-         再一次性编码转换是最快的方式
-
-         这种方法的好处是读取的内容可以彻底保持文件的原貌，
-         而且速度应该是最快的，因为只需要调用一次文件访问，字符编码转换也只需要一次
-         */
-
-        File file = new File("src\\main\\Java\\Derivative_word.txt");
-
-        Long filelength = file.length();     //获取文件长度
-
-        byte[] filecontent = new byte[filelength.intValue()];
-        try {
-            FileInputStream in = new FileInputStream(file);
-            in.read(filecontent);
-            in.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        System.out.println(new String(filecontent));
-        return new String(filecontent);
-    }
-}
