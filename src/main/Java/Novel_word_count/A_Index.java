@@ -3,20 +3,19 @@ package Novel_word_count;
 import org.junit.Test;
 import java.io.*;
 import java.sql.*;
-
 import java.lang.reflect.Array;
 import java.util.*;
 
 /*
     为了防止太多没意义的单词混淆视线,:
-        比如一些人名  (Esther Belkin. 埃丝特·贝尔金)
-        一些地名:     California 加利福尼亚
+        比如一些人名   Esther Belkin   埃丝特·贝尔金
+        一些地名:     California      加利福尼亚
 
         该程序会将一切带有大写字母的单词 , 直接滤过(人名和地名都有大写字母的存在, 所以直接跳过)
 
         只留下单纯全是小写字母的单词, 然后再去分析词频,
 
-        不然一本小说里面, 光是人名就出现了好几百次, 这样子统计出来的词频没有意义...
+        不然一本小说里面, 光是人名就出现了好几百次, 这样子统计出来的词频是没有意义的
 
         ps:
             src\main\Java\Novel_word_count\Novel

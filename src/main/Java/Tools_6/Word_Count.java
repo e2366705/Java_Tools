@@ -14,7 +14,7 @@ import java.util.Map.Entry;
 public class Word_Count {
     public static void main(String[] args) throws Exception {
 
-        BufferedReader br = new BufferedReader(new FileReader("src\\main\\Java\\english_novel.txt"));
+        BufferedReader br = new BufferedReader(new FileReader("src/main/Java/Tools_6/TXT/Novel_3.txt"));
         List<String> lists = new ArrayList<String>();  //存储过滤后单词的列表
         String readLine = null;
         while((readLine = br.readLine()) != null){

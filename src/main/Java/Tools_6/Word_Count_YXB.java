@@ -19,8 +19,7 @@ public class Word_Count_YXB {
     @Test
     public  void TEST__2() throws Exception {
 
-        //   过滤出首字母为 大写的 单词的 词频
-
+        //   找出 首字母为 大写的 单词的 词频
 
         List_map list_map = new List_map();
 
@@ -29,9 +28,6 @@ public class Word_Count_YXB {
         Map<String, Integer> stringIntegerMap = list_map.Get_word_map(list);
 
         list_map.SortMap(stringIntegerMap);
-
-
-
     }
 }
 
@@ -40,9 +36,7 @@ class Check_string{
     // 判断首字母是否大写?
     // 大写 => true
     public boolean First_letter_is_capitalized(String str) {
-
         char[] chars = str.toCharArray();
-
         return Character.isUpperCase(chars[0]);
     }
 }
@@ -60,7 +54,7 @@ class List_map{
 
         Check_string check_string = new Check_string();
 
-        BufferedReader br = new BufferedReader(new FileReader("src\\main\\Java\\english_novel.txt"));
+        BufferedReader br = new BufferedReader(new FileReader("src/main/Java/Tools_6/TXT/Novel_3.txt"));
         List<String> lists = new ArrayList<String>();  //存储过滤后单词的列表
         String readLine = null;
         while((readLine = br.readLine()) != null){
