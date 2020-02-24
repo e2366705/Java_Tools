@@ -22,6 +22,13 @@ import java.util.*;
 
 public class test04 {
 
+
+    @Test
+    public void Test000(){
+        System.out.printf("单词:%-66s 出现次数:%d\n", 123, 3123123);
+
+    }
+
     @Test
     public void main___() {
         String word_A = "defect";

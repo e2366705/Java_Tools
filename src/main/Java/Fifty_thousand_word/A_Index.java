@@ -1,10 +1,12 @@
-package Novel_word_count;
+package Fifty_thousand_word;
 
 import org.junit.Test;
-import java.io.*;
-import java.sql.*;
 
-import java.lang.reflect.Array;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.sql.SQLException;
 import java.util.*;
 
 /*
@@ -87,8 +89,6 @@ class Check_string{
 }
 
 
-
-
 // 某一文件夹里面的所有 txt 文件
 class Get_file_name{
     public ArrayList<String> getFiles(String path) {
@@ -108,10 +108,6 @@ class Get_file_name{
         return files;
     }
 }
-
-
-
-
 
 
 class List_map{
@@ -170,8 +166,10 @@ class List_map{
             }
         });
 
-        for(int i = 0; i < 999999; i++){
-//            Thread.sleep(66);
+        SQL sql = new SQL();
+
+        for(int i = 0; i < 66666; i++){
+            Thread.sleep(10);
             //         1201       danger      出现次数 : 34
             System.out.printf("%-8s   %-8s    出现次数 : %-8s \n", i , list.get(i).getKey() , list.get(i).getValue());
         }
