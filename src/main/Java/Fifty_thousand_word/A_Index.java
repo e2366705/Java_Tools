@@ -172,6 +172,7 @@ class List_map{
             Thread.sleep(10);
             //         1201       danger      出现次数 : 34
             System.out.printf("%-8s   %-8s    出现次数 : %-8s \n", i , list.get(i).getKey() , list.get(i).getValue());
+            sql.Insert(list.get(i).getKey());
         }
     }
 }

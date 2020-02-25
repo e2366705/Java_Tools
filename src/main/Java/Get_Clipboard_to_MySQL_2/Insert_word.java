@@ -23,7 +23,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Insert_word {
-
     @Test
     public void Insert_word() throws SQLException {
         SQL_ sql_ = new SQL_();

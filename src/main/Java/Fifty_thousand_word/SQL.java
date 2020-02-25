@@ -53,7 +53,7 @@ chinese_meaning
 
     public void Insert( String word) throws SQLException {
         Connection conn = getConn();
-        String sql = "insert into `tb_dictionary`(english_word) values(?)";
+        String sql = "insert into `tb_word`(word) values(?)";
 
         PreparedStatement ps = conn.prepareStatement(sql);
         System.out.println(ps.toString());      // 输出 SQL 语句

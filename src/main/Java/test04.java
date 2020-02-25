@@ -24,8 +24,20 @@ public class test04 {
 
 
     @Test
-    public void Test000(){
-        System.out.printf("单词:%-66s 出现次数:%d\n", 123, 3123123);
+    public void Test000() throws InterruptedException {
+
+        long start_Time =System.currentTimeMillis();   //获取开始时间
+        Thread.sleep(1231);
+        long end_Time =System.currentTimeMillis(); //获取结束时间
+        System.out.println("程序运行时间： "+(end_Time-start_Time)+"  ms");
+
+
+        long startTime=System.nanoTime();   //获取开始时间
+        Thread.sleep(1231);
+        long endTime=System.nanoTime(); //获取结束时间
+        System.out.println("程序运行时间： "+(endTime-startTime)+"  ns");
+
+
 
     }
 
